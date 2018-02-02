@@ -6,7 +6,5 @@ Matrix library that supports primitve operations, transposes, dot products, and 
  __Main.cpp__: Driver 
 ## Notes
 Compile source and main simultaneously:  
-'''
-g++ source.cpp main.cpp -o out
-'''
+'g++ source.cpp main.cpp -o out'
  
