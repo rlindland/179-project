@@ -15,7 +15,7 @@ Matrix library that supports primitive operations, transposes, dot products, and
 | Matrix | Subtraction (-)    |     Matrix a, Matrix b|
 | Matrix | Multiplication (*) |     Matrix a, Matrix b|
 |istream | &operator>>        | istream &is, Matrix &b|
-|istream | &operator<<        | ostream &os, Matrix &b|
+|ostream | &operator<<        | ostream &os, Matrix &b|
 ### Misc Functions
 | Return | Method             | Arguments             |
 | :------| :------------------| :---------------------|
