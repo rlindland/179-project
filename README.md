@@ -3,11 +3,11 @@ Matrix library that supports primitive operations, transposes, dot products, and
 
 ## Documentation
 ### Built-In Matrix Generation
-| Return | Method             | Arguments                              |Description                                            |    
-| :------| :------------------| :--------------------------------------| :-----------------------------------------------------|
-| Matrix | randn()            | int rows, int columns, int min, int max| Generates a matrix of random values within given range|
-| Matrix | ones()             | int rows, int columns                  | A matrix of ones                                      |
-| Matrix | eye()              | int rows, int columns                  | Identity Matrix                                       |
+| Return | Method             | Arguments                              |Description                      |    
+| :------| :------------------| :--------------------------------------| :-------------------------------|
+| Matrix | randn()            | int rows, int columns, int min, int max| Random values within given range|
+| Matrix | ones()             | int rows, int columns                  | A matrix of ones                |
+| Matrix | eye()              | int rows, int columns                  | Identity Matrix                 |
 ### Operators
 | Return | Operator           | Arguments             |
 | :------| :------------------| :---------------------|
