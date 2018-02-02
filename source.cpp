@@ -30,7 +30,6 @@ Matrix ones(int rows, int cols)
       nums[m][n]=1;
     }
   }
-
   return Matrix(nums);
 }
 

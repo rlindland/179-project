@@ -21,8 +21,8 @@ public:
   Matrix transpose();
   double dot(Matrix a);
 
-  friend Matrix &operator+(Matrix &a, Matrix &b);
-  friend Matrix &operator-(Matrix &a, Matrix &b);
+  friend Matrix operator+(Matrix a, Matrix b);
+  friend Matrix operator-(Matrix a, Matrix b);
   friend Matrix operator*(Matrix a, Matrix b);
   friend std::ostream &operator<<(std::ostream &os, Matrix &a);
   friend std::istream &operator>>(std::istream &is, Matrix &a);
