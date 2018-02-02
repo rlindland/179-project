@@ -4,7 +4,6 @@
 
 std::ostream &operator<<(std::ostream &os, Matrix &a)
 {
-  os<<"Matrix: ";
   for (int m=0; m<a.rows; m++)
   {
     for (int n=0; n<a.cols; n++)
@@ -13,14 +12,18 @@ std::ostream &operator<<(std::ostream &os, Matrix &a)
     }
     os<<std::endl;
   }
+  os<<"\n";
 }
 
 Matrix ones(int rows, int cols)
 {
-  std::vector<std::vector<int> > nums;
+  std::vector<std::vector<int> > nums (rows);
 
   for (int m=0; m<rows; m++)
   {
+    std::vector<int> g (cols);
+    nums[m] = g;
+
     for (int n=0; n<cols; n++)
     {
       nums[m][n]=1;
@@ -28,10 +31,4 @@ Matrix ones(int rows, int cols)
   }
 
   return Matrix(nums);
-}
-
-int main()
-{
-  Matrix a = ones(4, 4);
-  return 0;
 }

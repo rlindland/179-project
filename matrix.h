@@ -24,7 +24,6 @@ public:
   friend Matrix &operator*(Matrix &a, Matrix &b);
   friend std::ostream &operator<<(std::ostream &os, Matrix &a);
 };
-
 Matrix ones(int rows, int cols);
 Matrix I(int rows, int cols);
 Matrix rand(int rows, int cols);

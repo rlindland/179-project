@@ -5,7 +5,7 @@
 int main()
 {
   Matrix a = ones(4, 4);
-  //std::cout<<a;
+  std::cout<<a;
 
   return 0;
 }
