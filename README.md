@@ -3,13 +3,15 @@ Matrix library that supports primitive operations, transposes, dot products, and
 
 ## Documentation
 ### Built-In Matrix Generation
+```
 | Return | Method             | Arguments                              |Description                                            |    
 | :------| :------------------| :--------------------------------------| :-----------------------------------------------------|
 | Matrix | randn()            | int rows, int columns, int min, int max| Generates a matrix of random values within given range|
 | Matrix | ones()             | int rows, int columns                  | A matrix of ones                                      |
 | Matrix | eye()              | int rows, int columns                  | Identity Matrix                                       |
-
+```
 ### Operators
+```
 | Return | Operator           | Arguments             |
 | :------| :------------------| :---------------------|
 | Matrix | Addition (+)       |     Matrix a, Matrix b|
@@ -17,13 +19,14 @@ Matrix library that supports primitive operations, transposes, dot products, and
 | Matrix | Multiplication (*) |     Matrix a, Matrix b|
 |istream | &operator>>        | istream &is, Matrix &b|
 |istream | &operator<<        | ostream &os, Matrix &b|
-
+```
 ### Misc Functions
+```
 | Return | Method             | Arguments             |
 | :------| :------------------| :---------------------|
 | double | dot(Matrix, Matrix)|  Matrix a, Matrix B   |
 | Matrix | transpose()        |  None                 |
-
+```
 
 ## Files
  __Matrix.h__: Header file, contains methods and attributes  
