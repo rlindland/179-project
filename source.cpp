@@ -15,6 +15,7 @@ std::ostream &operator<<(std::ostream &os, Matrix &a)
     os<<std::endl;
   }
   os<<"\n";
+  return os;
 }
 
 Matrix ones(int rows, int cols)
