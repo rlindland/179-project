@@ -109,6 +109,11 @@ double Matrix::dot(Matrix a)
 
 Matrix operator*(Matrix a, Matrix b)
 {
+  if (a.cols!=b.rows)
+  {
+    std::cout<<"Error: Invalid matrix dimensions: Cannot perform multiplication";
+  }
+
   Matrix bt = b.transpose();
 
   std::vector<std::vector<double> > nums (a.rows);
@@ -123,4 +128,61 @@ Matrix operator*(Matrix a, Matrix b)
     }
   }
   return Matrix(nums);
+}
+
+Matrix operator+(Matrix a, Matrix b)
+{
+  if (a.rows!=b.rows || a.cols!=b.cols)
+  {
+    std::cout<<"Error: Invalid matrix dimensions: Cannot perform addition";
+  }
+
+  std::vector<std::vector<double> > nums (a.rows);
+  for (int m=0; m<a.rows; m++)
+  {
+    std::vector<double> g (a.cols);
+    nums[m] = g;
+
+    for (int n=0; n<a.cols; n++)
+    {
+      nums[m][n]=a.data[m][n]+b.data[m][n];
+    }
+  }
+  return Matrix(nums);
+}
+
+Matrix operator-(Matrix a, Matrix b)
+{
+  if (a.rows!=b.rows || a.cols!=b.cols)
+  {
+    std::cout<<"Error: Invalid matrix dimensions: Cannot perform subtraction";
+  }
+  std::vector<std::vector<double> > nums (a.rows);
+  for (int m=0; m<a.rows; m++)
+  {
+    std::vector<double> g (a.cols);
+    nums[m] = g;
+
+    for (int n=0; n<a.cols; n++)
+    {
+      nums[m][n]=a.data[m][n]-b.data[m][n];
+    }
+  }
+  return Matrix(nums);
+}
+
+std::istream &operator>>(std::istream &is, Matrix &a)
+{
+  double x;
+  std::vector<std::vector<double> > nums;
+  std::vector<double>g;
+  for (int m=0; m<a.rows; m++)
+  {
+    for (int n=0; n<a.cols; n++)
+    {
+      is>>x;
+      a.data[m].emplace_back(x);
+    }
+  }
+  return is;
 }

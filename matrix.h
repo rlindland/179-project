@@ -1,5 +1,6 @@
 #include <vector>
 #include <iostream>
+#include <math.h>
 
 class Matrix
 {
@@ -10,14 +11,10 @@ class Matrix
 public:
 
   Matrix(std::vector<std::vector<double> > nums) : rows(nums.size()), cols((*nums.begin()).size()), data(nums) {}
+  Matrix(int r, int c) : rows(r), cols(c), data(std::vector<std::vector<double> > (r)) {}
+  Matrix() : rows(0), cols(0), data(std::vector<std::vector<double> > (0)) {}
 
-  Matrix ones(int rows, int cols);
-  Matrix I(int rows, int cols);
-  Matrix rand(int rows, int cols);
 
-  Matrix U();
-  int det();
-  int trace();
   Matrix transpose();
   double dot(Matrix a);
 
