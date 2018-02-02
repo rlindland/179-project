@@ -86,3 +86,42 @@ Matrix Matrix::transpose()
   }
   return Matrix(nums);
 }
+
+double dot(std::vector<double> a, std::vector<double> b)
+{
+  double total = 0;
+  for (int i=0; i<a.size(); i++)
+  {
+    total+=a[i]*b[i];
+  }
+  return total;
+}
+
+double Matrix::dot(Matrix a)
+{
+  Matrix b = *this;
+  double total = 0;
+  for (int i=0; i<a.rows; i++)
+  {
+    total+=a.data[i][0]*b.data[i][0];
+  }
+  return total;
+}
+
+Matrix operator*(Matrix a, Matrix b)
+{
+  Matrix bt = b.transpose();
+
+  std::vector<std::vector<double> > nums (a.rows);
+  for (int m=0; m<(a.rows); m++)
+  {
+    std::vector<double> g (b.cols);
+    nums[m] = g;
+
+    for (int n=0; n<(b.cols); n++)
+    {
+      nums[m][n] = dot(a.data[m], bt.data[n]);
+    }
+  }
+  return Matrix(nums);
+}
