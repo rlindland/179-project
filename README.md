@@ -1,4 +1,4 @@
 # Matrix Library
-###### By Robert Lindland
+###### By Robert Lindland, Vaibhavi Shah, and Annie Yun
 Matrix library that supports primitve operations, transposes, dot products, and special matrices.
-See header file for methods and attributes. Built as project for 6.179 at MIT.
+See header file for methods and attributes. Built as a project for 6.179 at MIT.
